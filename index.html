@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeQuest | Level Up Your Life</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#">⚔ LifeQuest</a>
+    <span class="tagline">Turn your life into an adventure</span>
+    <button id="resetBtn" class="reset-btn">Reset Game</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL ADVENTURE</p>
+        <h1>Ready for your next <span>quest?</span></h1>
+        <p>Complete real-life missions. Earn XP. Become legendary.</p>
+      </div>
+      <div class="hero-icon">🏆</div>
+    </section>
+
+    <section class="profile card">
+      <div class="avatar" id="avatar">🧙</div>
+      <div class="profile-info">
+        <h2 id="playerName">Adventurer</h2>
+        <p id="levelText">Level 1 · Beginner</p>
+        <div class="xp-label">
+          <span id="xpText">0 / 100 XP</span>
+          <span id="totalXp">Total XP: 0</span>
+        </div>
+        <div class="progress-track">
+          <div id="xpBar" class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="level-badge">
+        <span>LEVEL</span>
+        <strong id="levelNumber">1</strong>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat card">
+        <span class="stat-icon">⚡</span>
+        <p>Total XP</p>
+        <h2 id="statXP">0</h2>
+      </article>
+      <article class="stat card">
+        <span class="stat-icon">✅</span>
+        <p>Quests Done</p>
+        <h2 id="statDone">0</h2>
+      </article>
+      <article class="stat card">
+        <span class="stat-icon">🔥</span>
+        <p>Daily Streak</p>
+        <h2 id="statStreak">0 days</h2>
+      </article>
+      <article class="stat card">
+        <span class="stat-icon">🏅</span>
+        <p>Achievements</p>
+        <h2 id="statBadges">0</h2>
+      </article>
+    </section>
+
+    <section class="dashboard">
+      <div class="quests-panel card">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR MISSION BOARD</p>
+            <h2>Daily Quests</h2>
+          </div>
+          <span class="quest-count" id="questCount">0 quests</span>
+        </div>
+
+        <form id="questForm" class="quest-form">
+          <input id="questInput" type="text"
+            placeholder="Add a new real-life quest..."
+            maxlength="80" required>
+          <select id="categoryInput" aria-label="Quest category">
+            <option value="Study">📚 Study</option>
+            <option value="Health">💪 Health</option>
+            <option value="Personal">🌱 Personal</option>
+            <option value="Work">💻 Work</option>
+          </select>
+          <button type="submit" class="primary-btn">+ Add Quest</button>
+        </form>
+
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="active">Active</button>
+          <button class="filter" data-filter="completed">Completed</button>
+        </div>
+
+        <div id="questList" class="quest-list">
+          <p class="empty">Loading quests...</p>
+        </div>
+      </div>
+
+      <aside class="side-panel">
+        <section class="card achievements">
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2>Achievement Badges</h2>
+          <div id="badgeList" class="badge-list"></div>
+        </section>
+
+        <section class="card daily-card">
+          <p class="eyebrow">DAILY CHALLENGE</p>
+          <div class="daily-icon">🌟</div>
+          <h3>Quest Master</h3>
+          <p>Complete 3 quests today to conquer your daily challenge.</p>
+          <div class="progress-track">
+            <div id="dailyBar" class="progress-fill"></div>
+          </div>
+          <p id="dailyText">0 / 3 completed today</p>
+        </section>
+      </aside>
+    </section>
+
+    <footer>
+      <p>⚔ LifeQuest · Every small action is a step toward greatness.</p>
+      <p>Your progress is saved in this browser.</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "gameName": "LifeQuest",
+  "startingLevel": 1,
+  "xpPerLevel": 100,
+  "dailyGoal": 3,
+  "quests": [
+    {
+      "id": "q1",
+      "title": "Study for 30 minutes",
+      "category": "Study",
+      "xp": 30
+    },
+    {
+      "id": "q2",
+      "title": "Read 10 pages of a book",
+      "category": "Study",
+      "xp": 20
+    },
+    {
+      "id": "q3",
+      "title": "Exercise or walk",
+      "category": "Health",
+      "xp": 25
+    },
+    {
+      "id": "q4",
+      "title": "Organize your study desk",
+      "category": "Personal",
+      "xp": 15
+    },
+    {
+      "id": "q5",
+      "title": "Practice a new skill",
+      "category": "Work",
+      "xp": 35
+    }
+  ]
+}
